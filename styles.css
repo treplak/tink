@@ -1,0 +1,88 @@
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: #000;
+  color: #fff;
+  overflow: hidden;
+}
+
+.story-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 600vw; /* 6 slides */
+  height: 100%;
+}
+
+.slide {
+  flex: 0 0 100vw;
+  height: 100vh;
+  position: relative;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #000;
+}
+
+.slide.active {
+  display: flex;
+}
+
+.slide img {
+  max-width: 90vw;
+  max-height: 70vh;
+  object-fit: contain;
+}
+
+.text {
+  margin-top: 1rem;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.text h2 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.text p, .text a {
+  font-size: 1rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.controls {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.controls button {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  margin: 0 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: #fff;
+  transition: width 0.5s ease;
+  z-index: 5;
+}
